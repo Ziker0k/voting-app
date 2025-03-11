@@ -2,7 +2,7 @@
 
     <!-- Уровень логирования по умолчанию для всех классов -->
     <root level="info">
-        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE"/>
     </root>
 
     <!-- Вывод логов в файл -->

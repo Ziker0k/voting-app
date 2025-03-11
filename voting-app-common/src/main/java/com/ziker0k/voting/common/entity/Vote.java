@@ -15,16 +15,15 @@ import java.util.concurrent.locks.ReentrantLock;
 @AllArgsConstructor
 @Builder
 public class Vote implements Serializable {
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    @JsonIgnore
+    private final ReentrantLock lock = new ReentrantLock();
     private String voteTitle;
     private String creator;
     private String description;
     private Map<String, Integer> options;
     private Set<String> voters;
-
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    @JsonIgnore
-    private final ReentrantLock lock = new ReentrantLock();
 
     // Голосование за вариант
     public boolean vote(String username, String option) {

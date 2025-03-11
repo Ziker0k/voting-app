@@ -9,10 +9,10 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static lombok.AccessLevel.*;
+import static lombok.AccessLevel.PRIVATE;
 
 @NoArgsConstructor(access = PRIVATE)
-public class CreateVoteMapper implements Mapper<CreateVoteDto, Vote>{
+public class CreateVoteMapper implements Mapper<CreateVoteDto, Vote> {
     private static final CreateVoteMapper INSTANCE = new CreateVoteMapper();
 
     public static CreateVoteMapper getInstance() {

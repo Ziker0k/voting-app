@@ -11,8 +11,6 @@ import org.slf4j.LoggerFactory;
 public class LoginCommand implements Command {
 
     private static final Logger log = LoggerFactory.getLogger(LoginCommand.class);
-    private final SessionManager sessionManager = SessionManager.getInstance();
-
     private static final String LOGIN_PREFIX = "-u=";
     private static final String ERROR_USERNAME_TAKEN = "Error! Username \"%s\" is already taken.\n";
     private static final String ERROR_INVALID_FORMAT = "Error! Use: login -u=username\n";
@@ -20,6 +18,7 @@ public class LoginCommand implements Command {
     private static final String LOGIN_SUCCESS = "You logged in as \"%s\"\n";
     private static final String ALREADY_LOGGED_IN = "You already logged in as %s\n";
     private static final String AUTH_ERROR = "Authorization error!\n";
+    private final SessionManager sessionManager = SessionManager.getInstance();
 
     @Override
     public String getName() {

@@ -2,8 +2,6 @@ package com.ziker0k.voting.common.dao;
 
 import com.ziker0k.voting.common.entity.Topic;
 import com.ziker0k.voting.common.entity.Vote;
-import com.ziker0k.voting.common.exception.TopicDaoException;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +10,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TopicDaoTest {
     TopicDao topicDao = TopicDao.getInstance();

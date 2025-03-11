@@ -15,13 +15,12 @@ import java.util.concurrent.locks.ReentrantLock;
 @AllArgsConstructor
 @Builder
 public class Topic implements Serializable {
-    private String topicName;
-    private Map<String, Vote> votes;
-
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     @JsonIgnore
     private final ReentrantLock lock = new ReentrantLock(); // Блокировка на уровне топика
+    private String topicName;
+    private Map<String, Vote> votes;
 
     // Добавить голосование в топик
     public boolean addVote(Vote vote) {

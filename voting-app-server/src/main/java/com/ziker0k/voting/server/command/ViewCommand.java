@@ -10,8 +10,6 @@ import com.ziker0k.voting.server.util.ViewFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Optional;
-
 public class ViewCommand implements Command {
     private static final Logger log = LoggerFactory.getLogger(ViewCommand.class);
 

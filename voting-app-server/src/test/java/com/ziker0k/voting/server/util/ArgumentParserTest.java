@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Optional;
 import java.util.stream.Stream;
 
 class ArgumentParserTest {
@@ -22,7 +21,7 @@ class ArgumentParserTest {
                 Arguments.of("-v=2", null),
                 Arguments.of("-t= -v=", null),
                 Arguments.of("-t=hfdlfsj kdfjsf -v=usdfs fdsf", new ParsedCommand("hfdlfsj", null))
-                );
+        );
     }
 
     @ParameterizedTest

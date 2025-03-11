@@ -9,8 +9,6 @@ import com.ziker0k.voting.server.util.ArgumentParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Optional;
-
 public class CreateVoteCommand implements Command {
     private static final Logger log = LoggerFactory.getLogger(CreateVoteCommand.class);
 

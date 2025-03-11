@@ -18,11 +18,10 @@ public class CreateVoteHandler extends SimpleChannelInboundHandler<String> {
     private final UserSession userSession;
     private final VotingService votingService;
     private final String topicTitle;
-
+    private final Set<String> options = new HashSet<>();
     private String voteTitle;
     private String voteDescription;
     private int numberOfChoices;
-    private final Set<String> options = new HashSet<>();
     private int step = 0;
 
     public CreateVoteHandler(UserSession userSession, VotingService votingService, String topicTitle) {

@@ -5,5 +5,6 @@ import com.ziker0k.voting.server.model.UserSession;
 
 public interface Command {
     String getName();
+
     void execute(UserSession userSession, VotingService votingService, String args);
 }

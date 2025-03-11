@@ -4,7 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ziker0k.voting.common.service.VotingService;
 import com.ziker0k.voting.server.model.Data;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 
 public class LoadServerCommand implements ServerCommand {
     private final VotingService votingService = VotingService.getInstance();

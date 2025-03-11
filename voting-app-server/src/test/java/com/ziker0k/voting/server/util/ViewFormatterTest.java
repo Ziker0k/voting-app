@@ -14,6 +14,46 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ViewFormatterTest {
 
+    private static TopicDto generateTopicDto(String topicTitle) {
+        return TopicDto.builder()
+                .topicTitle(topicTitle)
+                .votes(generateMapOfVoteDto())
+                .build();
+    }
+
+    private static Map<String, VoteDto> generateMapOfVoteDto() {
+        Map<String, VoteDto> map = new HashMap<>();
+        for (int i = 0; i < 3; i++) {
+            VoteDto voteDto = generateVoteDto(i);
+            map.put(voteDto.getVoteTitle(), voteDto);
+        }
+        return map;
+    }
+
+    private static VoteDto generateVoteDto(Integer index) {
+        return VoteDto.builder()
+                .voteTitle("Vote" + index)
+                .description("Description" + index)
+                .creator("Creator")
+                .voters(generateVoters())
+                .options(generateOptions())
+                .build();
+    }
+
+    private static HashSet<String> generateVoters() {
+        HashSet<String> voters = new HashSet<>();
+        voters.add("Creator");
+        voters.add("Voter");
+        return voters;
+    }
+
+    private static HashMap<String, Integer> generateOptions() {
+        HashMap<String, Integer> options = new HashMap<>();
+        options.put("no", 1);
+        options.put("yes", 1);
+        return options;
+    }
+
     @Test
     void formatTopics_WhenHasTopics_ShouldReturnFormattedTopics() {
         List<TopicDto> topics = List.of(
@@ -95,46 +135,6 @@ class ViewFormatterTest {
                  - yes (votes: 1)
                 """;
         Assertions.assertThat(actual).isEqualTo(expected);
-    }
-
-    private static TopicDto generateTopicDto(String topicTitle) {
-        return TopicDto.builder()
-                .topicTitle(topicTitle)
-                .votes(generateMapOfVoteDto())
-                .build();
-    }
-
-    private static Map<String, VoteDto> generateMapOfVoteDto() {
-        Map<String, VoteDto> map = new HashMap<>();
-        for (int i = 0; i < 3; i++) {
-            VoteDto voteDto = generateVoteDto(i);
-            map.put(voteDto.getVoteTitle(), voteDto);
-        }
-        return map;
-    }
-
-    private static VoteDto generateVoteDto(Integer index) {
-        return VoteDto.builder()
-                .voteTitle("Vote" + index)
-                .description("Description" + index)
-                .creator("Creator")
-                .voters(generateVoters())
-                .options(generateOptions())
-                .build();
-    }
-
-    private static HashSet<String> generateVoters() {
-        HashSet<String> voters = new HashSet<>();
-        voters.add("Creator");
-        voters.add("Voter");
-        return voters;
-    }
-
-    private static HashMap<String, Integer> generateOptions() {
-        HashMap<String, Integer> options = new HashMap<>();
-        options.put("no", 1);
-        options.put("yes", 1);
-        return options;
     }
 
     private TopicDto getTopicDto(String topicTitle, Map<String, VoteDto> votes) {

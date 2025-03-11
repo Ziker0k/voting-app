@@ -5,7 +5,10 @@ import com.ziker0k.voting.common.entity.Vote;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -92,9 +95,9 @@ public class VotingDao {
         }
     }
 
-/*
-        TODO Work with votes
- */
+    /*
+            TODO Work with votes
+     */
     // Добавление голосования в топик
     public boolean addVoteToTopic(Vote vote, Topic input) {
         topicsLock.readLock().lock();
@@ -175,7 +178,7 @@ public class VotingDao {
         }
     }
 
-//    TODO:DELETE
+    //    TODO:DELETE
 //     For test
     public void clear() {
         topics.clear();

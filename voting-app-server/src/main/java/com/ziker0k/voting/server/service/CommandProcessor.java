@@ -8,8 +8,8 @@ import com.ziker0k.voting.server.model.UserState;
 import java.util.Set;
 
 public class CommandProcessor {
-    private final CommandRegistry commandRegistry;
     private static final Set<String> PUBLIC_COMMANDS = Set.of("login");
+    private final CommandRegistry commandRegistry;
 
 
     public CommandProcessor(CommandRegistry commandRegistry) {

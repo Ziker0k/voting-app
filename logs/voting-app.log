@@ -1,0 +1,30 @@
+2025-03-11 22:57:22 [main] INFO  c.ziker0k.voting.server.VotingServer - Voting server started on port 8060
+2025-03-11 22:57:29 [main] WARN  c.z.v.server.service.ServerConsole - Unknown command: create
+2025-03-11 22:59:37 [main] INFO  c.ziker0k.voting.server.VotingServer - Voting server started on port 8060
+2025-03-11 22:59:43 [main] WARN  c.z.v.server.service.ServerConsole - Unknown command: create
+2025-03-11 22:59:53 [main] INFO  c.z.v.server.service.ServerConsole - Executed command: load
+2025-03-11 23:00:02 [main] INFO  c.z.v.server.service.ServerConsole - Executed command: load
+2025-03-11 23:00:40 [main] INFO  c.ziker0k.voting.server.VotingServer - Voting server started on port 8060
+2025-03-11 23:01:20 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.LoginCommand - User Google logged in successfully.
+2025-03-11 23:01:33 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing all topics.
+2025-03-11 23:01:53 [nioEventLoopGroup-3-1] INFO  c.z.v.s.command.CreateTopicCommand - Topic created successfully: New
+2025-03-11 23:01:57 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing all topics.
+2025-03-11 23:02:32 [nioEventLoopGroup-3-1] INFO  c.z.v.s.command.CreateVoteCommand - User Google started creating a vote in topic: New
+2025-03-11 23:02:44 [nioEventLoopGroup-3-1] INFO  c.z.v.s.handler.CreateVoteHandler - Vote 'New vote' created successfully for topic 'New'
+2025-03-11 23:02:47 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing all topics.
+2025-03-11 23:04:28 [main] INFO  c.z.v.server.service.ServerConsole - Executed command: load
+2025-03-11 23:04:34 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing all topics.
+2025-03-11 23:04:49 [nioEventLoopGroup-3-1] WARN  c.z.v.s.command.CreateTopicCommand - Invalid command format for creating topic: -t=Jojo
+2025-03-11 23:04:57 [nioEventLoopGroup-3-1] INFO  c.z.v.s.command.CreateTopicCommand - Topic created successfully: Jojo
+2025-03-11 23:05:06 [nioEventLoopGroup-3-1] INFO  c.z.v.s.command.CreateVoteCommand - User Google started creating a vote in topic: Jojo
+2025-03-11 23:05:18 [nioEventLoopGroup-3-1] INFO  c.z.v.s.handler.CreateVoteHandler - Vote 'New' created successfully for topic 'Jojo'
+2025-03-11 23:05:20 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing all topics.
+2025-03-11 23:05:33 [nioEventLoopGroup-3-1] WARN  c.z.v.server.command.VoteCommand - Vote not found: Vote in topic: Jojo
+2025-03-11 23:05:44 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing all votes in topic: Jojo
+2025-03-11 23:05:53 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.VoteCommand - User Google is voting in topic: Jojo for vote: New
+2025-03-11 23:05:58 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing all topics.
+2025-03-11 23:06:07 [nioEventLoopGroup-3-1] WARN  c.z.v.server.command.ViewCommand - Vote not found in topic 'Jojo': Topic
+2025-03-11 23:06:24 [nioEventLoopGroup-3-1] INFO  c.z.v.server.command.ViewCommand - Showing details of vote 'New' in topic 'Jojo'.
+2025-03-11 23:07:44 [main] INFO  c.z.v.server.service.ServerConsole - Server shutdown initiated by user.
+2025-03-11 23:07:44 [main] INFO  c.ziker0k.voting.server.VotingServer - Shutting down server...
+2025-03-11 23:07:44 [main] INFO  c.ziker0k.voting.server.VotingServer - Server shut down.

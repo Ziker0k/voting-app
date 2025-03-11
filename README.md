@@ -10,11 +10,11 @@ Even though this app is raw, and I need to write even more tests, but still. I e
 
 You can run app with 
 
-java jar voting-app-runner-1.0-SNAPSHOT-jar-with-dependencies.jar server
+java -jar voting-app-runner-1.0-SNAPSHOT-jar-with-dependencies.jar server
 
 if you want to run server
 or
 
-java jar voting-app-runner-1.0-SNAPSHOT-jar-with-dependencies.jar client
+java -jar voting-app-runner-1.0-SNAPSHOT-jar-with-dependencies.jar client
 
 if..... client

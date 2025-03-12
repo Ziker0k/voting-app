@@ -18,3 +18,5 @@ or
 java -jar voting-app-runner-1.0-SNAPSHOT-jar-with-dependencies.jar client
 
 if..... client
+
+To package app, you can use mvn wrapper
